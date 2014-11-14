@@ -6,7 +6,7 @@ This is the design document for the KentekenScan app.
 
 This app uses the built-in camera to take a picture. Thereafter, the picture is analysed to see if a license plate can be detected and identified.
 
-## Classes and public methods
+## MVC
 
 ### Model
 
@@ -42,4 +42,4 @@ This app uses the built-in camera to take a picture. Thereafter, the picture is 
 ![wireframe](https://github.com/jetsekoopmans/KentekenScan/blob/master/doc/wireframe.png)
 
 ## Optional
-Display information about the recognized license plate found on ovi.rdw.nl.
+Display information (year, max speed, power...) about the recognized license plate found on ovi.rdw.nl.
