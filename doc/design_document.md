@@ -4,20 +4,19 @@ This is the design document for the KentekenScan app.
 
 ## Description
 
-This app uses the built-in camera to take a picture. Thereafter, the picture is analysed to see if a license plate can be detected and identified.
+This app uses the camera to take a picture. Thereafter, the picture is analysed to see if a license plate can be detected and identified.
 
 ## MVC
 
 ### Model
 
-- NSMutableArray to keep track of the recognized license plate characters.
-- Extra information is needed for built-in camera, OpenCV and tesseract use.
+- NSMutableArray to keep track of the recognized license plate characters. This array is persistent.
+- Extra information is needed for camera, OpenCV and tesseract use.
+- PopUp view only shown at first launch.
 
 ### View
-
-- WelcomeView: subclass of UIView that contains:
-    - UITextView for the intro text.
-    - UIButton to go to the second screen.
+- PopUpView: subclass of UIView that contains:
+    - UITextView with an intro text
 - CameraView: sublcass of UIView that contains:
     - UIImageView for the camera view.
     - Two UIButtons to approve or disapprove the photo.
@@ -27,14 +26,14 @@ This app uses the built-in camera to take a picture. Thereafter, the picture is 
 
 ### Controller
 
-- WelcomeViewController: subclass of UIViewController to display the welcome screen.
+- PopUpController: to show/hide the welcome popup.
 - CameraViewController: subclass of UIViewController to display the camera view, the approve/dissapprove buttons and the alert that displays the recognized license plate characters.
 - ResultsViewController: subclass of UITTableViewController to display all scanned and recognized license plate characters.
 - NavigationController: subclass of UINavigationController to navigate between the different screens as shown in the wireframe.
 
 ## APIs and frameworks
 
-- built-in camera to take a picture.
+- Camera to take a picture.
 - OpenCV to detect a license plate.
 - Tesseract OCR to identify the detected license plate as characters.
 
