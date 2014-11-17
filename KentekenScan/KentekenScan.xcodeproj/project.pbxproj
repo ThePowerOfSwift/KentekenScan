@@ -14,6 +14,7 @@
 		42127F521A165263004FA692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42127F511A165263004FA692 /* Images.xcassets */; };
 		42127F551A165263004FA692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42127F531A165263004FA692 /* LaunchScreen.xib */; };
 		42127F611A165263004FA692 /* KentekenScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F601A165263004FA692 /* KentekenScanTests.m */; };
+		42B67F501A1A4A1C00E1D2AB /* iphonescreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		42127F5A1A165263004FA692 /* KentekenScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KentekenScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42127F5F1A165263004FA692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42127F601A165263004FA692 /* KentekenScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KentekenScanTests.m; sourceTree = "<group>"; };
+		42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphonescreen.png; path = ../../../../../../Downloads/iphonescreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		42127F431A165262004FA692 /* KentekenScan */ = {
 			isa = PBXGroup;
 			children = (
+				42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */,
 				42127F481A165263004FA692 /* AppDelegate.h */,
 				42127F491A165263004FA692 /* AppDelegate.m */,
 				42127F4B1A165263004FA692 /* ViewController.h */,
@@ -202,6 +205,7 @@
 			files = (
 				42127F501A165263004FA692 /* Main.storyboard in Resources */,
 				42127F551A165263004FA692 /* LaunchScreen.xib in Resources */,
+				42B67F501A1A4A1C00E1D2AB /* iphonescreen.png in Resources */,
 				42127F521A165263004FA692 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

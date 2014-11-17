@@ -47,22 +47,28 @@
 }
 
 - (IBAction)takePhoto:(UIButton *)sender {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.delegate = self;
-    imagePicker.allowsEditing = YES;
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    UIImage *image = [UIImage imageNamed:@"iphonescreen.png"];
+    UIImageView *overlay = [[UIImageView alloc] initWithImage:image];
+    
+    overlay.alpha = 0.5f;
+    picker.cameraOverlayView = overlay;
+    
     // To disable camera controlers:
 //  imagePicker.showsCameraControls = NO;
 
-    [self presentViewController:imagePicker animated:YES completion:NULL];
+    [self presentViewController:picker animated:YES completion:NULL];
 }
 
 - (IBAction)selectPhoto:(UIButton *)sender {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.delegate = self;
-    imagePicker.allowsEditing = YES;
-    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    [self presentViewController:imagePicker animated:YES completion:NULL];
+    [self presentViewController:picker animated:YES completion:NULL];
 }
 @end
