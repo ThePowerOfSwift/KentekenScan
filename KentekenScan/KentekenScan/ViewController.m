@@ -33,36 +33,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-// When a photo is picked
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image = info[UIImagePickerControllerEditedImage];
-    NSLog(@"size: %f", image.scale);
-    self.imageView.image = image;
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
 // When picked photo is cancelled
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
+// Go to camera view
 - (IBAction)takePhoto:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.allowsEditing = YES;
+//    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    UIImage *image = [UIImage imageNamed:@"iphonescreen.png"];
-    UIImageView *overlay = [[UIImageView alloc] initWithImage:image];
-    
-    overlay.alpha = 0.5f;
-    picker.cameraOverlayView = overlay;
-    
     // To disable camera controlers:
 //  imagePicker.showsCameraControls = NO;
 
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+// Select photo from library
 - (IBAction)selectPhoto:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -70,5 +58,13 @@
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
+}
+
+// When image is picked
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = image;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
