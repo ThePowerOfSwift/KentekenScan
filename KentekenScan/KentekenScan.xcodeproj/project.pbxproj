@@ -415,6 +415,7 @@
 				42127F661A165263004FA692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42127F671A165263004FA692 /* Build configuration list for PBXNativeTarget "KentekenScanTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				42127F691A165263004FA692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
