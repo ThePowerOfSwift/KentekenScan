@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		42127F471A165263004FA692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F461A165263004FA692 /* main.m */; };
 		42127F4A1A165263004FA692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F491A165263004FA692 /* AppDelegate.m */; };
-		42127F4D1A165263004FA692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* ViewController.m */; };
+		42127F4D1A165263004FA692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* ViewController.m */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		42127F501A165263004FA692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42127F4E1A165263004FA692 /* Main.storyboard */; };
 		42127F521A165263004FA692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42127F511A165263004FA692 /* Images.xcassets */; };
 		42127F551A165263004FA692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42127F531A165263004FA692 /* LaunchScreen.xib */; };
 		42127F611A165263004FA692 /* KentekenScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F601A165263004FA692 /* KentekenScanTests.m */; };
+		421891A31A1B9469007EB692 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421891A21A1B9469007EB692 /* opencv2.framework */; };
+		421891A61A1B999E007EB692 /* fruitschaal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421891A51A1B999E007EB692 /* fruitschaal.jpg */; };
 		42B67F501A1A4A1C00E1D2AB /* iphonescreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,9 @@
 		42127F5A1A165263004FA692 /* KentekenScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KentekenScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42127F5F1A165263004FA692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42127F601A165263004FA692 /* KentekenScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KentekenScanTests.m; sourceTree = "<group>"; };
+		421891A21A1B9469007EB692 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		421891A41A1B94D6007EB692 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		421891A51A1B999E007EB692 /* fruitschaal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruitschaal.jpg; sourceTree = "<group>"; };
 		42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphonescreen.png; path = ../../../../../../Downloads/iphonescreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421891A31A1B9469007EB692 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 		42127F431A165262004FA692 /* KentekenScan */ = {
 			isa = PBXGroup;
 			children = (
+				421891A51A1B999E007EB692 /* fruitschaal.jpg */,
 				42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */,
 				42127F481A165263004FA692 /* AppDelegate.h */,
 				42127F491A165263004FA692 /* AppDelegate.m */,
@@ -99,8 +106,10 @@
 		42127F441A165262004FA692 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				421891A21A1B9469007EB692 /* opencv2.framework */,
 				42127F451A165263004FA692 /* Info.plist */,
 				42127F461A165263004FA692 /* main.m */,
+				421891A41A1B94D6007EB692 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 			files = (
 				42127F501A165263004FA692 /* Main.storyboard in Resources */,
 				42127F551A165263004FA692 /* LaunchScreen.xib in Resources */,
+				421891A61A1B999E007EB692 /* fruitschaal.jpg in Resources */,
 				42B67F501A1A4A1C00E1D2AB /* iphonescreen.png in Resources */,
 				42127F521A165263004FA692 /* Images.xcassets in Resources */,
 			);
@@ -349,6 +359,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KentekenScan",
+				);
+				GCC_PREFIX_HEADER = KentekenScan/PrefixHeader.pch;
 				INFOPLIST_FILE = KentekenScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +375,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KentekenScan",
+				);
+				GCC_PREFIX_HEADER = KentekenScan/PrefixHeader.pch;
 				INFOPLIST_FILE = KentekenScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  KentekenScan
+//
+//  Created by Jetse Koopmans on 18/11/14.
+//  Copyright (c) 2014 Lepps. All rights reserved.
+//
+
+#ifndef KentekenScan_PrefixHeader_pch
+#define KentekenScan_PrefixHeader_pch
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+
+
+#endif
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
