@@ -18,15 +18,15 @@
     [super viewDidLoad];
     
     // Error alert if user is in simulator
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles: nil];
-        [myAlertView show];
-    }
-    self.imageView.image = [UIImage imageNamed:@"fruitschaal.jpg"];
+//    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                              message:@"Device has no camera"
+//                                                             delegate:nil
+//                                                    cancelButtonTitle:@"OK"
+//                                                    otherButtonTitles: nil];
+//        [myAlertView show];
+//    }
+    self.imageView.image = [UIImage imageNamed:@"test.jpg"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,31 +69,73 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
-- (IBAction)openCV:(UIButton *)sender {
-    UIImage *image = self.imageView.image;
-    cv::Mat cvImage;
-    UIImageToMat(image, cvImage);
-    if (!cvImage.empty())
-    {
-        cv::Mat gray;
-        // Convert the image to grayscale
-// TODO:
-        // CV_RGBA2GRAY = 11....
-        cv::cvtColor(cvImage, gray, 11);
-        // Apply Gaussian filter to remove small edges
-        cv::GaussianBlur(gray, gray, cv::Size(5, 5), 1.2, 1.2);
-        
-        // Calculate edges with Canny
-        cv::Mat edges;
-        cv::Canny(gray, edges, 0, 50);
-        // Fill image with white color
-        cvImage.setTo(cv::Scalar::all(255));
-        // Change color on edges
-        cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
-        // Convert cv::Mat to UIImage* and show the resulting image
-        self.imageView.image = MatToUIImage(cvImage);
+bool verifySizes(cv::RotatedRect mr){
+    
+    float error=0.4;
+    //Spain car plate size: 52x11 aspect 4,7272
+    float aspect=4.7272;
+    //Set a min and max area. All other patchs are discarded
+    int min= 15*aspect*15; // minimum area
+    int max= 125*aspect*125; // maximum area
+    //Get only patchs that match to a respect ratio.
+    float rmin= aspect-aspect*error;
+    float rmax= aspect+aspect*error;
+    
+    int area= mr.size.height * mr.size.width;
+    float r= (float)mr.size.width / (float)mr.size.height;
+    if(r<1)
+        r= (float)mr.size.height / (float)mr.size.width;
+    
+    if(( area < min || area > max ) || ( r < rmin || r > rmax )){
+        return false;
+    }else{
+        return true;
     }
+    
+}
 
+cv::Mat histeq(cv::Mat in)
+{
+    cv::Mat out(in.size(), in.type());
+    if(in.channels()==3){
+        cv::Mat hsv;
+        std::vector<cv::Mat> hsvSplit;
+        cvtColor(in, hsv, 40);
+        split(hsv, hsvSplit);
+        equalizeHist(hsvSplit[2], hsvSplit[2]);
+        merge(hsvSplit, hsv);
+        cvtColor(hsv, out, 54);
+    }else if(in.channels()==1){
+        equalizeHist(in, out);
+    }
+    
+    return out;
+    
+}
+//
+//int floodFill(cv::InputOutputArray image, cv::InputOutputArray mask, Point seedPoint, cv::Scalar newVal, Rect* rect=0, cv::Scalar loDiff=cv::Scalar(), cv::Scalar upDiff=cv::Scalar(), int flags=4 ){}
+
+- (IBAction)openCV:(UIButton *)sender {
+    
+    cv::Mat input;
+    UIImageToMat(self.imageView.image, input);
+    DetectRegions detectRegions;
+    detectRegions.saveRegions=false;
+    detectRegions.showSteps=false;
+
+//    vector<Plate> posible_regions= detectRegions.run( input );
+//    posible_regions.
+    self.imageView.image = MatToUIImage(detectRegions.segment(input));
+    
+}
+
+double angle( cv::Point pt1, cv::Point pt2, cv::Point pt0 )
+{
+    double dx1 = pt1.x - pt0.x;
+    double dy1 = pt1.y - pt0.y;
+    double dx2 = pt2.x - pt0.x;
+    double dy2 = pt2.y - pt0.y;
+    return (dx1 * dx2 + dy1 * dy2)/sqrt((dx1 * dx1 + dy1 * dy1) * (dx2 * dx2 + dy2 * dy2) + 1e-10);
 }
 
 // Convert UIImage to Mat

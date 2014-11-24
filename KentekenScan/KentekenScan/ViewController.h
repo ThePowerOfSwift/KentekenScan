@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "Plate.h"
+#include "DetectRegions.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)openCV:(UIButton *)sender;
+
 
 @end
