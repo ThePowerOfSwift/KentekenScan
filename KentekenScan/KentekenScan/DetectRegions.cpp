@@ -120,7 +120,8 @@ Mat DetectRegions::segment(Mat input){
                      -1, // draw all contours
                      cv::Scalar(255,0,0), // in blue
                      1); // with a thickness of 1
-    
+    Mat mask;
+
     for(int i=0; i< rects.size(); i++){
         
         //For better rect cropping for each posible box
@@ -133,7 +134,6 @@ Mat DetectRegions::segment(Mat input){
         //initialize rand and get 5 points around center for floodfill algorithm
         srand ( time(NULL) );
         //Initialize floodfill parameters and variables
-        Mat mask;
         mask.create(input.rows + 2, input.cols + 2, CV_8UC1);
         mask= Scalar::all(0);
         int loDiff = 30;
@@ -148,7 +148,6 @@ Mat DetectRegions::segment(Mat input){
             seed.x=rects[i].center.x+rand()%(int)minSize-(minSize/2);
             seed.y=rects[i].center.y+rand()%(int)minSize-(minSize/2);
             circle(result, seed, 1, Scalar(0,255,255), -1);
-//            int area = floodFill(input, mask, seed, Scalar(255,0,0), &ccomp, Scalar(loDiff, loDiff, loDiff), Scalar(upDiff, upDiff, upDiff), flags);
             int area = floodFill(img_gray, mask, seed, Scalar(255,0,0), &ccomp, Scalar(loDiff, loDiff, loDiff), Scalar(upDiff, upDiff, upDiff), flags);
         }
         if(showSteps)
@@ -167,6 +166,7 @@ Mat DetectRegions::segment(Mat input){
         RotatedRect minRect = minAreaRect(pointsInterest);
         
         if(verifySizes(minRect)){
+            return mask;
             // rotated rectangle drawing
             Point2f rect_points[4]; minRect.points( rect_points );
             for( int j = 0; j < 4; j++ )
@@ -194,6 +194,7 @@ Mat DetectRegions::segment(Mat input){
             resultResized.create(33,144, CV_8UC3);
             resize(img_crop, resultResized, resultResized.size(), 0, 0, INTER_CUBIC);
             //Equalize croped image
+            return resultResized;
             Mat grayResult;
             cvtColor(resultResized, grayResult, 6);
             blur(grayResult, grayResult, Size(3,3));
@@ -206,10 +207,11 @@ Mat DetectRegions::segment(Mat input){
             output.push_back(Plate(grayResult,minRect.boundingRect()));
         }
     }
+//    return img_gray;
     if(showSteps)
         imshow("Contours", result);
 
-    return output;
+    return result;
 }
 
 vector<Plate> DetectRegions::run(Mat input){

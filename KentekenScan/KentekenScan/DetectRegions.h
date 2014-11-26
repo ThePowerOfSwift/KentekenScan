@@ -32,8 +32,9 @@ public:
     bool saveRegions;
     bool showSteps;
         vector<Plate> run(Mat input);
-    Mat segment(Mat input);
+    Mat segment(Mat imgInput);
 
+    
 private:
     bool verifySizes(RotatedRect mr);
     Mat histeq(Mat in);
