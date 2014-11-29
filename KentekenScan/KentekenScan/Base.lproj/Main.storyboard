@@ -72,15 +72,15 @@
                                 <exclude reference="Xlb-xu-J8m"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DoJ-3q-Kud"/>
-                                <exclude reference="XpS-qk-AVm"/>
-                                <exclude reference="1Ho-PZ-s09"/>
-                                <exclude reference="7Je-ur-qa3"/>
-                                <exclude reference="pMt-8k-zyr"/>
                                 <exclude reference="Vj0-FO-xFJ"/>
                                 <exclude reference="fQR-34-D48"/>
                                 <exclude reference="wf2-Bv-lxk"/>
+                                <exclude reference="7Je-ur-qa3"/>
+                                <exclude reference="pMt-8k-zyr"/>
                                 <exclude reference="koo-EE-DXg"/>
+                                <exclude reference="1Ho-PZ-s09"/>
+                                <exclude reference="DoJ-3q-Kud"/>
+                                <exclude reference="XpS-qk-AVm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -91,15 +91,15 @@
                                 <include reference="Xlb-xu-J8m"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DoJ-3q-Kud"/>
-                                <include reference="XpS-qk-AVm"/>
-                                <include reference="1Ho-PZ-s09"/>
-                                <include reference="7Je-ur-qa3"/>
-                                <exclude reference="pMt-8k-zyr"/>
                                 <include reference="Vj0-FO-xFJ"/>
                                 <include reference="fQR-34-D48"/>
                                 <include reference="wf2-Bv-lxk"/>
+                                <include reference="7Je-ur-qa3"/>
+                                <exclude reference="pMt-8k-zyr"/>
                                 <include reference="koo-EE-DXg"/>
+                                <include reference="1Ho-PZ-s09"/>
+                                <include reference="DoJ-3q-Kud"/>
+                                <include reference="XpS-qk-AVm"/>
                             </mask>
                         </variation>
                     </view>

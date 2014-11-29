@@ -9,18 +9,15 @@
 /* Begin PBXBuildFile section */
 		42127F471A165263004FA692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F461A165263004FA692 /* main.m */; };
 		42127F4A1A165263004FA692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F491A165263004FA692 /* AppDelegate.m */; };
-		42127F4D1A165263004FA692 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* ViewController.mm */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
+		42127F4D1A165263004FA692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* ViewController.m */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		42127F501A165263004FA692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42127F4E1A165263004FA692 /* Main.storyboard */; };
 		42127F521A165263004FA692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42127F511A165263004FA692 /* Images.xcassets */; };
 		42127F551A165263004FA692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42127F531A165263004FA692 /* LaunchScreen.xib */; };
 		42127F611A165263004FA692 /* KentekenScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F601A165263004FA692 /* KentekenScanTests.m */; };
 		421891A31A1B9469007EB692 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421891A21A1B9469007EB692 /* opencv2.framework */; };
 		421891A61A1B999E007EB692 /* fruitschaal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421891A51A1B999E007EB692 /* fruitschaal.jpg */; };
-		421891A91A1CA466007EB692 /* ImageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 421891A71A1CA466007EB692 /* ImageProcessor.cpp */; };
 		421891AD1A1CB903007EB692 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421891AC1A1CB903007EB692 /* test.jpg */; };
 		42B67F501A1A4A1C00E1D2AB /* iphonescreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */; };
-		42E2F8CD1A23698C00FE5738 /* DetectRegions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42E2F8CB1A23698C00FE5738 /* DetectRegions.cpp */; };
-		42E2F8D01A236A9600FE5738 /* Plate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42E2F8CE1A236A9600FE5738 /* Plate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +37,7 @@
 		42127F481A165263004FA692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42127F491A165263004FA692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		42127F4B1A165263004FA692 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		42127F4C1A165263004FA692 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		42127F4C1A165263004FA692 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		42127F4F1A165263004FA692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42127F511A165263004FA692 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42127F541A165263004FA692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,14 +47,8 @@
 		421891A21A1B9469007EB692 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		421891A41A1B94D6007EB692 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		421891A51A1B999E007EB692 /* fruitschaal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fruitschaal.jpg; sourceTree = "<group>"; };
-		421891A71A1CA466007EB692 /* ImageProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageProcessor.cpp; sourceTree = "<group>"; };
-		421891A81A1CA466007EB692 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		421891AC1A1CB903007EB692 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		42B67F4F1A1A4A1C00E1D2AB /* iphonescreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphonescreen.png; path = ../../../../../../Downloads/iphonescreen.png; sourceTree = "<group>"; };
-		42E2F8CB1A23698C00FE5738 /* DetectRegions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DetectRegions.cpp; sourceTree = "<group>"; };
-		42E2F8CC1A23698C00FE5738 /* DetectRegions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectRegions.h; sourceTree = "<group>"; };
-		42E2F8CE1A236A9600FE5738 /* Plate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plate.cpp; sourceTree = "<group>"; };
-		42E2F8CF1A236A9600FE5738 /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plate.h; sourceTree = "<group>"; };
 		42E2F8D71A23B01D00FE5738 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,13 +99,7 @@
 				42127F481A165263004FA692 /* AppDelegate.h */,
 				42127F491A165263004FA692 /* AppDelegate.m */,
 				42127F4B1A165263004FA692 /* ViewController.h */,
-				42127F4C1A165263004FA692 /* ViewController.mm */,
-				421891A71A1CA466007EB692 /* ImageProcessor.cpp */,
-				421891A81A1CA466007EB692 /* ImageProcessor.h */,
-				42E2F8CB1A23698C00FE5738 /* DetectRegions.cpp */,
-				42E2F8CC1A23698C00FE5738 /* DetectRegions.h */,
-				42E2F8CE1A236A9600FE5738 /* Plate.cpp */,
-				42E2F8CF1A236A9600FE5738 /* Plate.h */,
+				42127F4C1A165263004FA692 /* ViewController.m */,
 				42127F4E1A165263004FA692 /* Main.storyboard */,
 				42127F511A165263004FA692 /* Images.xcassets */,
 				42127F531A165263004FA692 /* LaunchScreen.xib */,
@@ -263,11 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E2F8D01A236A9600FE5738 /* Plate.cpp in Sources */,
-				42127F4D1A165263004FA692 /* ViewController.mm in Sources */,
-				42E2F8CD1A23698C00FE5738 /* DetectRegions.cpp in Sources */,
+				42127F4D1A165263004FA692 /* ViewController.m in Sources */,
 				42127F4A1A165263004FA692 /* AppDelegate.m in Sources */,
-				421891A91A1CA466007EB692 /* ImageProcessor.cpp in Sources */,
 				42127F471A165263004FA692 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
