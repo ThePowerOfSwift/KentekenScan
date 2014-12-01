@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageProcessingImplementation.h"
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+//    id <ImageProcessingProtocol> imageProcessor;
+}
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(UIButton *)sender;
