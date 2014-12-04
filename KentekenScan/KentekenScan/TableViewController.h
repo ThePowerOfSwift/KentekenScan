@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
 
 @interface TableViewController : UITableViewController
 
 @property (nonatomic,strong) NSMutableArray *results;
-@property (nonatomic,strong) NSString *result;
 
 @end

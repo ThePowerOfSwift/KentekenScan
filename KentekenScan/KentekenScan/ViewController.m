@@ -15,29 +15,20 @@
 @end
 
 @implementation ViewController
-//@synthesize results;
+@synthesize results;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.results = [[NSMutableArray alloc]init];
-    // Error alert if user is in simulator
-//    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
-//                                                              message:@"Device has no camera"
-//                                                             delegate:nil
-//                                                    cancelButtonTitle:@"OK"
-//                                                    otherButtonTitles: nil];
-//        [myAlertView show];
-//    }
     
+    self.results = [[NSMutableArray alloc] init];
     imageProcessor = [ImageProcessingImplementation new];
+    
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = [UIImage imageNamed:@"image_sample.jpg"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 // When picked photo is cancelled
@@ -47,22 +38,37 @@
 
 // When image is picked
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = image;
+    UIImage *image;
     
+    // Check if there is a cropped image
+    if (info[UIImagePickerControllerEditedImage]) {
+        image = info[UIImagePickerControllerEditedImage];
+    }
+    else {
+        image = info[UIImagePickerControllerOriginalImage];
+    }
+    
+    self.imageView.image = image;
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
-// Go to camera view
+// Go to camera view if it is available
 - (IBAction)takePhoto:(UIButton *)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    // To disable camera controlers:
-//  imagePicker.showsCameraControls = NO;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
 
-    [self presentViewController:picker animated:YES completion:NULL];
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
+    else {
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"Back"
+                                                    otherButtonTitles: nil];
+        [myAlertView show];
+    }
 }
 
 // Select photo from library
@@ -75,12 +81,11 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
-// Process image and detect characters
+// Process image, detect characters and alert the result
 - (IBAction)openCV:(UIButton *)sender {
     UIImage *processedImage;
     
     processedImage = [imageProcessor processImage:self.imageView.image];
-//    self.imageView.image = processedImage;
 
     result = [imageProcessor OCRImage:processedImage];
     
@@ -92,27 +97,27 @@
     [myAlertView show];
 }
 
-// User clicked one of the Goed/Fout buttons
+// User clicked one of the "goed" button from alert
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0)
-    {
-        NSLog(@"fout");
-    }
-    else
-    {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TableViewController *tableViewController = [storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
-//        tableViewController.result = result;
-//        [self.results addObject:result];
-        NSLog(@"Result: %@", result);
-//        NSLog(@"results; @", self.results[0]);
-//        NSLog(@"Array: %@",self.results);
-        tableViewController.result = result;
-//        NSLog(@"Array2: %@",tableViewController.results);
-
-//        tableViewController.results = myArray;
-//        tableViewController.results = [[NSMutableArray alloc] initWithObjects: @"Red", @"Yellow", @"Green", @"Blue", @"Purpole", nil];
+    if (buttonIndex == 1) {
+        TableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
+        
+        // Check empty result
+        if (![result isEqualToString:@""]) {
+            [self.results addObject:result];
+        }
+        
+        tableViewController.results = self.results;
+        
         [self.navigationController pushViewController:tableViewController animated:YES];
+    }
+}
+
+// Pass data via segue to table view
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showTableView"]) {
+        TableViewController *tableViewController = segue.destinationViewController;
+        tableViewController.results = self.results;
     }
 }
 @end

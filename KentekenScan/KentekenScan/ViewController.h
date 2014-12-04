@@ -19,7 +19,7 @@
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)openCV:(UIButton *)sender;
 
-//@property (nonatomic,strong) NSMutableArray *results;
+@property (nonatomic,strong) NSMutableArray *results;
 
 
 @end

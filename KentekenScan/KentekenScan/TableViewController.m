@@ -8,30 +8,14 @@
 
 #import "TableViewController.h"
 
-@implementation TableViewController {
-//    NSMutableArray *results = [[NSMu]];
-}
-//@synthesize results;
+@implementation TableViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewdidload");
-    [self.results addObject:self.result];
-//    self.results = [[NSMutableArray alloc]init];
-//    [self.results addObject:self.result];
-//    NSLog(@"Array: %@", results);
-//    [TableViewController.results];
-//    ViewController *viewController=[[ViewController alloc] init];
-//    self.results = viewController.results;
-//    NSLog(@"table view: Array: %@", viewController.results);
-
-
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"viewwillappear");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,9 +23,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [viewController.results];
     return [self.results count];
-//    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
