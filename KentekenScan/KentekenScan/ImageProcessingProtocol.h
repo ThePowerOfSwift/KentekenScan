@@ -8,7 +8,7 @@
 
 @protocol ImageProcessingProtocol <NSObject>
 
-- (UIImage*)processImage:(UIImage*)src;
-- (NSString*)OCRImage:(UIImage*)src;
+- (UIImage *)processImage:(UIImage *)src;
+- (NSString *)OCRImage:(UIImage *)src;
 
 @end

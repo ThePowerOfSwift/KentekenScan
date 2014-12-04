@@ -11,7 +11,8 @@
 
 @interface ImageProcessingImplementation : NSObject <ImageProcessingProtocol>
 
-- (UIImage*)processImage:(UIImage*) src;
-- (NSString*)OCRImage:(UIImage*) src;
+- (NSString *)OCRImage:(UIImage *) src;
+- (UIImage *)processImage:(UIImage *) src;
+double angle (cv::Point pt1, cv::Point pt2, cv::Point pt0);
 
 @end

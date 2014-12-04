@@ -15,7 +15,6 @@
 		42127F551A165263004FA692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42127F531A165263004FA692 /* LaunchScreen.xib */; };
 		42127F611A165263004FA692 /* KentekenScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F601A165263004FA692 /* KentekenScanTests.m */; };
 		421891A31A1B9469007EB692 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421891A21A1B9469007EB692 /* opencv2.framework */; };
-		421891AD1A1CB903007EB692 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 421891AC1A1CB903007EB692 /* test.jpg */; };
 		422BE0581A29EFE600DDDD6C /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */; };
 		422BE0D41A29F5FB00DDDD6C /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 422BE0D31A29F5FB00DDDD6C /* tessdata */; };
 		422BE0D61A29F69000DDDD6C /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */; };
@@ -51,7 +50,6 @@
 		42127F601A165263004FA692 /* KentekenScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KentekenScanTests.m; sourceTree = "<group>"; };
 		421891A21A1B9469007EB692 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		421891A41A1B94D6007EB692 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		421891AC1A1CB903007EB692 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		422BE0D31A29F5FB00DDDD6C /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				422BE0D31A29F5FB00DDDD6C /* tessdata */,
-				421891AC1A1CB903007EB692 /* test.jpg */,
 				42127F481A165263004FA692 /* AppDelegate.h */,
 				42127F491A165263004FA692 /* AppDelegate.m */,
 				42127F4B1A165263004FA692 /* ViewController.h */,
@@ -254,7 +251,6 @@
 				422BE0D81A29FD7000DDDD6C /* image_sample.jpg in Resources */,
 				42127F551A165263004FA692 /* LaunchScreen.xib in Resources */,
 				422BE0D41A29F5FB00DDDD6C /* tessdata in Resources */,
-				421891AD1A1CB903007EB692 /* test.jpg in Resources */,
 				42127F521A165263004FA692 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,6 +5,8 @@
 //  Created by Jetse Koopmans on 04/12/14.
 //  Copyright (c) 2014 Lepps. All rights reserved.
 //
+//  Code for the TableViewController to show the license plates in the table.
+//
 
 #import "TableViewController.h"
 

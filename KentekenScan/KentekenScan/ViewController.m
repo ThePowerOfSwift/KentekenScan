@@ -5,6 +5,8 @@
 //  Created by Jetse Koopmans on 14/11/14.
 //  Copyright (c) 2014 Lepps. All rights reserved.
 //
+//  Code for the ViewController to handle the photo stuff.
+//
 
 #import "ViewController.h"
 
@@ -12,6 +14,7 @@
     id <ImageProcessingProtocol> imageProcessor;
     NSString *result;
 }
+
 @end
 
 @implementation ViewController
