@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageProcessingImplementation.h"
+#import "TableViewController.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
 //    id <ImageProcessingProtocol> imageProcessor;
@@ -17,6 +18,8 @@
 - (IBAction)takePhoto:(UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)openCV:(UIButton *)sender;
+
+//@property (nonatomic,strong) NSMutableArray *results;
 
 
 @end

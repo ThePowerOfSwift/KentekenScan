@@ -10,15 +10,16 @@
 
 @interface ViewController (){
     id <ImageProcessingProtocol> imageProcessor;
-
+    NSString *result;
 }
 @end
 
 @implementation ViewController
+//@synthesize results;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    self.results = [[NSMutableArray alloc]init];
     // Error alert if user is in simulator
 //    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
 //        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -81,7 +82,7 @@
     processedImage = [imageProcessor processImage:self.imageView.image];
 //    self.imageView.image = processedImage;
 
-    NSString* result = [imageProcessor OCRImage:processedImage];
+    result = [imageProcessor OCRImage:processedImage];
     
     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"
                                                           message:result
@@ -99,7 +100,19 @@
     }
     else
     {
-        NSLog(@"goed");
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TableViewController *tableViewController = [storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
+//        tableViewController.result = result;
+//        [self.results addObject:result];
+        NSLog(@"Result: %@", result);
+//        NSLog(@"results; @", self.results[0]);
+//        NSLog(@"Array: %@",self.results);
+        tableViewController.result = result;
+//        NSLog(@"Array2: %@",tableViewController.results);
+
+//        tableViewController.results = myArray;
+//        tableViewController.results = [[NSMutableArray alloc] initWithObjects: @"Red", @"Yellow", @"Green", @"Blue", @"Purpole", nil];
+        [self.navigationController pushViewController:tableViewController animated:YES];
     }
 }
 @end
