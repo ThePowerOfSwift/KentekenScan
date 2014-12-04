@@ -83,11 +83,23 @@
 
     NSString* result = [imageProcessor OCRImage:processedImage];
     
-    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Result"
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"
                                                           message:result
-                                                         delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles: nil];
+                                                         delegate:self
+                                                cancelButtonTitle:@"Fout"
+                                                otherButtonTitles: @"Goed", nil];
     [myAlertView show];
+}
+
+// User clicked one of the Goed/Fout buttons
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        NSLog(@"fout");
+    }
+    else
+    {
+        NSLog(@"goed");
+    }
 }
 @end
