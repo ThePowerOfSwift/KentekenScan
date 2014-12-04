@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSC-Wi-le6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="60" width="600" height="740"/>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-rw-SQW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Maak foto">
@@ -38,22 +44,22 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlb-xu-J8m">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="CHECK">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="   Check   ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="271" y="750" width="58" height="30"/>
+                                    <rect key="frame" x="260" y="750" width="80" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="openCV:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DZJ-8q-Sxb"/>
+                                    <action selector="checkPhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TRT-wD-r71"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSC-Wi-le6">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="60" width="600" height="740"/>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,10 +79,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="cSC-Wi-le6"/>
                                 <exclude reference="pAM-rw-SQW"/>
                                 <exclude reference="cpk-Ee-4QQ"/>
                                 <exclude reference="Xlb-xu-J8m"/>
-                                <exclude reference="cSC-Wi-le6"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Vj0-FO-xFJ"/>
@@ -94,10 +100,10 @@
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
+                                <include reference="cSC-Wi-le6"/>
                                 <include reference="pAM-rw-SQW"/>
                                 <include reference="cpk-Ee-4QQ"/>
                                 <include reference="Xlb-xu-J8m"/>
-                                <include reference="cSC-Wi-le6"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Vj0-FO-xFJ"/>

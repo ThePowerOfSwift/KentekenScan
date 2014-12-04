@@ -82,11 +82,11 @@
 }
 
 // Process image, detect characters and alert the result
-- (IBAction)openCV:(UIButton *)sender {
+- (IBAction)checkPhoto:(UIButton *)sender {
     UIImage *processedImage;
     
     processedImage = [imageProcessor processImage:self.imageView.image];
-
+    
     result = [imageProcessor OCRImage:processedImage];
     
     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"

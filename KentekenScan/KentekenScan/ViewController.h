@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
-- (IBAction)openCV:(UIButton *)sender;
+- (IBAction)checkPhoto:(UIButton *)sender;
 
 @property (nonatomic,strong) NSMutableArray *results;
 
