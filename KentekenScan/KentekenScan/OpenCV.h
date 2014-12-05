@@ -12,6 +12,6 @@
 
 +(UIImage *)MatToUIImage:(const cv::Mat&)cvMat;
 
-@property(nonatomic, readonly) cv::Mat CVMat;
+@property(readonly, nonatomic) cv::Mat CVMat;
 
 @end
