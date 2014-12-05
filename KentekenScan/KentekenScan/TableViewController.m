@@ -14,6 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Lijst";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,16 +25,17 @@
     return 1;
 }
 
+// Shows how many rows there are in the tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.results count];
 }
 
+// Show for each row in the tableView the license plate.
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier =@"Cell";
-    UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text=[self.results objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.results objectAtIndex:indexPath.row];
     
     return cell;
 }

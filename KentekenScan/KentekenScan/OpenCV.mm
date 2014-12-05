@@ -1,5 +1,5 @@
 //
-//  UIImage+OpenCV.mm
+//  OpenCV.mm
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
@@ -8,7 +8,7 @@
 //  OpenCV functions to convert between UIImage and Mat
 //
 
-#import "UIImage+OpenCV.h"
+#import "OpenCV.h"
 
 @implementation UIImage (UIImage_OpenCV)
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
@@ -8,16 +8,16 @@
 //  Code for the ViewController to handle the photo stuff.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController (){
+@interface MainViewController (){
     id <ImageProcessingProtocol> imageProcessor;
     NSString *result;
 }
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 @synthesize results;
 
 - (void)viewDidLoad {

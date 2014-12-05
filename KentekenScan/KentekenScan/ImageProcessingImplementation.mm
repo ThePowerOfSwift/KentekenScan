@@ -10,7 +10,7 @@
 //
 
 #import "ImageProcessingImplementation.h"
-#import "UIImage+OpenCV.h"
+#import "OpenCV.h"
 #import <TesseractOCR/TesseractOCR.h>
 
 @implementation ImageProcessingImplementation

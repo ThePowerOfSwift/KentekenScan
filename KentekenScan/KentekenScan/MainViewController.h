@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
@@ -10,16 +10,14 @@
 #import "ImageProcessingImplementation.h"
 #import "TableViewController.h"
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
-//    id <ImageProcessingProtocol> imageProcessor;
-}
+@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)checkPhoto:(UIButton *)sender;
 
-@property (nonatomic,strong) NSMutableArray *results;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSMutableArray *results;
 
 
 @end

@@ -10,6 +10,6 @@
 
 @interface TableViewController : UITableViewController
 
-@property (nonatomic,strong) NSMutableArray *results;
+@property (strong, nonatomic) NSMutableArray *results;
 
 @end

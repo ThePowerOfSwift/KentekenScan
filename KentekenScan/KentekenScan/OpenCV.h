@@ -1,5 +1,5 @@
 //
-//  UIImage+OpenCV.h
+//  OpenCV.h
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
