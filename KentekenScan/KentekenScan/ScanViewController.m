@@ -1,5 +1,5 @@
 //
-//  MainViewController.m
+//  ScanViewController.m
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
@@ -8,15 +8,15 @@
 //  Code for the ViewController to handle the photo stuff.
 //
 
-#import "MainViewController.h"
+#import "ScanViewController.h"
 
-@interface MainViewController (){
+@interface ScanViewController (){
     NSString *result;
 }
 
 @end
 
-@implementation MainViewController
+@implementation ScanViewController
 @synthesize results;
 
 - (void)viewDidLoad {
@@ -112,7 +112,7 @@
 // User clicked one of the "goed" button from alert
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        TableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
+        ResultsTableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
         
         [self.results addObject:result];
         
@@ -125,7 +125,7 @@
 // Pass data via segue to table view
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showTableView"]) {
-        TableViewController *tableViewController = segue.destinationViewController;
+        ResultsTableViewController *tableViewController = segue.destinationViewController;
         tableViewController.results = self.results;
     }
 }

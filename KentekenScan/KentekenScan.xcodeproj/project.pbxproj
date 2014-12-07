@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		42127F471A165263004FA692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F461A165263004FA692 /* main.m */; };
 		42127F4A1A165263004FA692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F491A165263004FA692 /* AppDelegate.m */; };
-		42127F4D1A165263004FA692 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* MainViewController.m */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
+		42127F4D1A165263004FA692 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42127F4C1A165263004FA692 /* ScanViewController.m */; settings = {COMPILER_FLAGS = "-x objective-c++"; }; };
 		42127F501A165263004FA692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42127F4E1A165263004FA692 /* Main.storyboard */; };
 		42127F521A165263004FA692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42127F511A165263004FA692 /* Images.xcassets */; };
 		42127F551A165263004FA692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42127F531A165263004FA692 /* LaunchScreen.xib */; };
@@ -18,7 +18,7 @@
 		422BE0581A29EFE600DDDD6C /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */; };
 		422BE0D41A29F5FB00DDDD6C /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 422BE0D31A29F5FB00DDDD6C /* tessdata */; };
 		422BE0D61A29F69000DDDD6C /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */; };
-		423204A51A308EB60062523F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 423204A41A308EB60062523F /* TableViewController.m */; };
+		423204A51A308EB60062523F /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 423204A41A308EB60062523F /* ResultsTableViewController.m */; };
 		423204A71A31CBCA0062523F /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 423204A61A31CBCA0062523F /* image_sample.jpg */; };
 		427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */; };
 		427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A691A29E2CA00C4FB70 /* OpenCV.mm */; };
@@ -40,8 +40,8 @@
 		42127F461A165263004FA692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42127F481A165263004FA692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42127F491A165263004FA692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		42127F4B1A165263004FA692 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		42127F4C1A165263004FA692 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		42127F4B1A165263004FA692 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		42127F4C1A165263004FA692 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		42127F4F1A165263004FA692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42127F511A165263004FA692 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42127F541A165263004FA692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,8 +53,8 @@
 		422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		422BE0D31A29F5FB00DDDD6C /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
-		423204A31A308EB60062523F /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		423204A41A308EB60062523F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		423204A31A308EB60062523F /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		423204A41A308EB60062523F /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		423204A61A31CBCA0062523F /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
 		427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
@@ -109,10 +109,10 @@
 			children = (
 				42127F481A165263004FA692 /* AppDelegate.h */,
 				42127F491A165263004FA692 /* AppDelegate.m */,
-				42127F4B1A165263004FA692 /* MainViewController.h */,
-				42127F4C1A165263004FA692 /* MainViewController.m */,
-				423204A31A308EB60062523F /* TableViewController.h */,
-				423204A41A308EB60062523F /* TableViewController.m */,
+				42127F4B1A165263004FA692 /* ScanViewController.h */,
+				42127F4C1A165263004FA692 /* ScanViewController.m */,
+				423204A31A308EB60062523F /* ResultsTableViewController.h */,
+				423204A41A308EB60062523F /* ResultsTableViewController.m */,
 				427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */,
 				427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */,
 				427A9A651A29E2CA00C4FB70 /* ImageProcessingProtocol.h */,
@@ -270,8 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */,
-				423204A51A308EB60062523F /* TableViewController.m in Sources */,
-				42127F4D1A165263004FA692 /* MainViewController.m in Sources */,
+				423204A51A308EB60062523F /* ResultsTableViewController.m in Sources */,
+				42127F4D1A165263004FA692 /* ScanViewController.m in Sources */,
 				42127F4A1A165263004FA692 /* AppDelegate.m in Sources */,
 				427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */,
 				42127F471A165263004FA692 /* main.m in Sources */,

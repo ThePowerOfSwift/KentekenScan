@@ -1,5 +1,5 @@
 //
-//  TableViewController.h
+//  ResultsTableViewController.h
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 04/12/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface ResultsTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *results;
 

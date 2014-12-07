@@ -1,5 +1,5 @@
 //
-//  TableViewController.m
+//  ResultsTableViewController.m
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 04/12/14.
@@ -8,13 +8,12 @@
 //  Code for the TableViewController to show the license plates in the table.
 //
 
-#import "TableViewController.h"
+#import "ResultsTableViewController.h"
 
-@implementation TableViewController
+@implementation ResultsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Lijst";
 }
 
 - (void)didReceiveMemoryWarning {

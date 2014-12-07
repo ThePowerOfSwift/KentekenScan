@@ -9,7 +9,7 @@
         <!--Scan-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ScanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="998" y="164.25"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Resultaten-->
         <scene sceneID="MO8-ay-5Hg">
             <objects>
-                <tableViewController storyboardIdentifier="TableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RDy-OY-hfc" customClass="TableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableViewController" title="Resultaten" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RDy-OY-hfc" customClass="ResultsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f1f-rQ-9bC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  ScanViewController.h
 //  KentekenScan
 //
 //  Created by Jetse Koopmans on 14/11/14.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageProcessingImplementation.h"
-#import "TableViewController.h"
+#import "ResultsTableViewController.h"
 
-@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ScanViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (IBAction)takePhoto:(UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
