@@ -89,14 +89,24 @@
     UIImage *processedImage;
     
     processedImage = [imageProcessor processImage:self.imageView.image];
-    
     result = [imageProcessor OCRImage:processedImage];
+
+    // Check if result is empty
+    UIAlertView *myAlertView;
+    if ([result isEqualToString:@""]) {
+        myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"
+                                                 message:@"Geen kenteken herkend. Probeert u het nogmaals."
+                                                delegate:self
+                                       cancelButtonTitle:@"Ok"
+                                       otherButtonTitles:nil];
+    } else {
+        myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"
+                                                 message:result
+                                                delegate:self
+                                       cancelButtonTitle:@"Fout"
+                                       otherButtonTitles:@"Goed", nil];
+    }
     
-    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Resultaat"
-                                                          message:result
-                                                         delegate:self
-                                                cancelButtonTitle:@"Fout"
-                                                otherButtonTitles: @"Goed", nil];
     [myAlertView show];
 }
 
@@ -105,10 +115,7 @@
     if (buttonIndex == 1) {
         TableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
         
-        // Check empty result
-        if (![result isEqualToString:@""]) {
-            [self.results addObject:result];
-        }
+        [self.results addObject:result];
         
         tableViewController.results = self.results;
         
