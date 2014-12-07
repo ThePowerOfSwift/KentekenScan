@@ -23,6 +23,7 @@
 		4252375E1A34B141003DD523 /* ScanViewOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4252375D1A34B141003DD523 /* ScanViewOverlay.m */; };
 		425237601A34C055003DD523 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */; };
 		425237621A34D454003DD523 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425237611A34D453003DD523 /* CoreData.framework */; };
+		425237651A34D511003DD523 /* KentekenScan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 425237631A34D511003DD523 /* KentekenScan.xcdatamodeld */; };
 		427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */; };
 		427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A691A29E2CA00C4FB70 /* OpenCV.mm */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		4252375D1A34B141003DD523 /* ScanViewOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewOverlay.m; sourceTree = "<group>"; };
 		4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		425237611A34D453003DD523 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		425237641A34D511003DD523 /* KentekenScan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KentekenScan.xcdatamodel; sourceTree = "<group>"; };
 		427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
 		427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
 		427A9A651A29E2CA00C4FB70 /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				42127F4C1A165263004FA692 /* ScanViewController.m */,
 				4252375C1A34B141003DD523 /* ScanViewOverlay.h */,
 				4252375D1A34B141003DD523 /* ScanViewOverlay.m */,
+				425237631A34D511003DD523 /* KentekenScan.xcdatamodeld */,
 				423204A31A308EB60062523F /* ResultsTableViewController.h */,
 				423204A41A308EB60062523F /* ResultsTableViewController.m */,
 				427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */,
@@ -285,6 +288,7 @@
 				427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */,
 				423204A51A308EB60062523F /* ResultsTableViewController.m in Sources */,
 				42127F4D1A165263004FA692 /* ScanViewController.m in Sources */,
+				425237651A34D511003DD523 /* KentekenScan.xcdatamodeld in Sources */,
 				4252375E1A34B141003DD523 /* ScanViewOverlay.m in Sources */,
 				42127F4A1A165263004FA692 /* AppDelegate.m in Sources */,
 				427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */,
@@ -519,6 +523,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		425237631A34D511003DD523 /* KentekenScan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				425237641A34D511003DD523 /* KentekenScan.xcdatamodel */,
+			);
+			currentVersion = 425237641A34D511003DD523 /* KentekenScan.xcdatamodel */;
+			path = KentekenScan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42127F391A165262004FA692 /* Project object */;
 }

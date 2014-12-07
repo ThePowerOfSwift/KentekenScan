@@ -11,7 +11,7 @@
 #import "ScanViewController.h"
 #import "ScanViewOverlay.h"
 
-@interface ScanViewController (){
+@interface ScanViewController () {
     NSString *result;
 }
 
