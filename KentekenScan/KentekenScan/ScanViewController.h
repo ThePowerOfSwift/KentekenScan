@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ImageProcessingImplementation.h"
 #import "ResultsTableViewController.h"
+#import "ScanViewOverlay.h"
 
 @interface ScanViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

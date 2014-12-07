@@ -20,6 +20,8 @@
 		422BE0D61A29F69000DDDD6C /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */; };
 		423204A51A308EB60062523F /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 423204A41A308EB60062523F /* ResultsTableViewController.m */; };
 		423204A71A31CBCA0062523F /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 423204A61A31CBCA0062523F /* image_sample.jpg */; };
+		4252375E1A34B141003DD523 /* ScanViewOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4252375D1A34B141003DD523 /* ScanViewOverlay.m */; };
+		425237601A34C055003DD523 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */; };
 		427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */; };
 		427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A691A29E2CA00C4FB70 /* OpenCV.mm */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,9 @@
 		423204A31A308EB60062523F /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		423204A41A308EB60062523F /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		423204A61A31CBCA0062523F /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
+		4252375C1A34B141003DD523 /* ScanViewOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewOverlay.h; sourceTree = "<group>"; };
+		4252375D1A34B141003DD523 /* ScanViewOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewOverlay.m; sourceTree = "<group>"; };
+		4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
 		427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
 		427A9A651A29E2CA00C4FB70 /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
@@ -111,6 +116,8 @@
 				42127F491A165263004FA692 /* AppDelegate.m */,
 				42127F4B1A165263004FA692 /* ScanViewController.h */,
 				42127F4C1A165263004FA692 /* ScanViewController.m */,
+				4252375C1A34B141003DD523 /* ScanViewOverlay.h */,
+				4252375D1A34B141003DD523 /* ScanViewOverlay.m */,
 				423204A31A308EB60062523F /* ResultsTableViewController.h */,
 				423204A41A308EB60062523F /* ResultsTableViewController.m */,
 				427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */,
@@ -130,6 +137,7 @@
 		42127F441A165262004FA692 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */,
 				421891A21A1B9469007EB692 /* opencv2.framework */,
 				422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */,
 				422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */,
@@ -250,6 +258,7 @@
 				42127F501A165263004FA692 /* Main.storyboard in Resources */,
 				423204A71A31CBCA0062523F /* image_sample.jpg in Resources */,
 				42127F551A165263004FA692 /* LaunchScreen.xib in Resources */,
+				425237601A34C055003DD523 /* fontawesome-webfont.ttf in Resources */,
 				422BE0D41A29F5FB00DDDD6C /* tessdata in Resources */,
 				42127F521A165263004FA692 /* Images.xcassets in Resources */,
 			);
@@ -272,6 +281,7 @@
 				427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */,
 				423204A51A308EB60062523F /* ResultsTableViewController.m in Sources */,
 				42127F4D1A165263004FA692 /* ScanViewController.m in Sources */,
+				4252375E1A34B141003DD523 /* ScanViewOverlay.m in Sources */,
 				42127F4A1A165263004FA692 /* AppDelegate.m in Sources */,
 				427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */,
 				42127F471A165263004FA692 /* main.m in Sources */,

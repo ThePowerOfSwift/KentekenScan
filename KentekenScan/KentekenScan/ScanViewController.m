@@ -9,6 +9,7 @@
 //
 
 #import "ScanViewController.h"
+#import "ScanViewOverlay.h"
 
 @interface ScanViewController (){
     NSString *result;
@@ -24,7 +25,7 @@
     
     self.results = [[NSMutableArray alloc] init];
     self.imageProcessor = [ImageProcessingImplementation new];
-    
+
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = [UIImage imageNamed:@"image_sample.jpg"];
 }
@@ -44,9 +45,11 @@
     
     // Check if there is a cropped image
     if (info[UIImagePickerControllerEditedImage]) {
+        NSLog(@"%s", "CROPPED");
         image = info[UIImagePickerControllerEditedImage];
     }
     else {
+        NSLog(@"%s", "ORIGINAL");
         image = info[UIImagePickerControllerOriginalImage];
     }
     
@@ -60,6 +63,18 @@
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.showsCameraControls = NO;
+        picker.navigationBarHidden = YES;
+        picker.toolbarHidden = YES;
+        
+        // calculate the ratio that the camera height needs to be scaled by
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        float scale = screenSize.height / screenSize.width;
+        picker.cameraViewTransform = CGAffineTransformMakeScale(scale, scale);
+
+        // Set custom camera view
+        ScanViewOverlay *overlay = [[ScanViewOverlay alloc] customViewForImagePicker:picker];
+        picker.cameraOverlayView = overlay;
 
         [self presentViewController:picker animated:YES completion:NULL];
     }
@@ -115,7 +130,6 @@
         ResultsTableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
         
         [self.results addObject:result];
-        
         tableViewController.results = self.results;
         
         [self.navigationController pushViewController:tableViewController animated:YES];
