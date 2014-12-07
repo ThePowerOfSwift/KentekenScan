@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Lepps. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface ResultsTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *results;

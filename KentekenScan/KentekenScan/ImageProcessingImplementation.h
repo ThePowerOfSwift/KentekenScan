@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Lepps. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "ImageProcessingProtocol.h"
 
 @interface ImageProcessingImplementation : NSObject <ImageProcessingProtocol>

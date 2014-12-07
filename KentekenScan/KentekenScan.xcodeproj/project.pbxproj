@@ -22,6 +22,7 @@
 		423204A71A31CBCA0062523F /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 423204A61A31CBCA0062523F /* image_sample.jpg */; };
 		4252375E1A34B141003DD523 /* ScanViewOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4252375D1A34B141003DD523 /* ScanViewOverlay.m */; };
 		425237601A34C055003DD523 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */; };
+		425237621A34D454003DD523 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425237611A34D453003DD523 /* CoreData.framework */; };
 		427A9A6C1A29E2CA00C4FB70 /* ImageProcessingImplementation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */; };
 		427A9A6E1A29E2CA00C4FB70 /* OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 427A9A691A29E2CA00C4FB70 /* OpenCV.mm */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		4252375C1A34B141003DD523 /* ScanViewOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewOverlay.h; sourceTree = "<group>"; };
 		4252375D1A34B141003DD523 /* ScanViewOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewOverlay.m; sourceTree = "<group>"; };
 		4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		425237611A34D453003DD523 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		427A9A631A29E2CA00C4FB70 /* ImageProcessingImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingImplementation.h; sourceTree = "<group>"; };
 		427A9A641A29E2CA00C4FB70 /* ImageProcessingImplementation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessingImplementation.mm; sourceTree = "<group>"; };
 		427A9A651A29E2CA00C4FB70 /* ImageProcessingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessingProtocol.h; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425237621A34D454003DD523 /* CoreData.framework in Frameworks */,
 				422BE0581A29EFE600DDDD6C /* libstdc++.6.0.9.dylib in Frameworks */,
 				422BE0D61A29F69000DDDD6C /* TesseractOCR.framework in Frameworks */,
 				421891A31A1B9469007EB692 /* opencv2.framework in Frameworks */,
@@ -137,10 +140,11 @@
 		42127F441A165262004FA692 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */,
+				425237611A34D453003DD523 /* CoreData.framework */,
 				421891A21A1B9469007EB692 /* opencv2.framework */,
 				422BE0D51A29F69000DDDD6C /* TesseractOCR.framework */,
 				422BE0571A29EFE600DDDD6C /* libstdc++.6.0.9.dylib */,
+				4252375F1A34BD00003DD523 /* fontawesome-webfont.ttf */,
 				423204A61A31CBCA0062523F /* image_sample.jpg */,
 				42127F451A165263004FA692 /* Info.plist */,
 				42127F461A165263004FA692 /* main.m */,

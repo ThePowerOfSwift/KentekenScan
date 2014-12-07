@@ -45,11 +45,9 @@
     
     // Check if there is a cropped image
     if (info[UIImagePickerControllerEditedImage]) {
-        NSLog(@"%s", "CROPPED");
         image = info[UIImagePickerControllerEditedImage];
     }
     else {
-        NSLog(@"%s", "ORIGINAL");
         image = info[UIImagePickerControllerOriginalImage];
     }
     
