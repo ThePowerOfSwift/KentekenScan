@@ -18,6 +18,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSMutableArray *results;
-
+@property (strong, nonatomic) id <ImageProcessingProtocol> imageProcessor;
 
 @end

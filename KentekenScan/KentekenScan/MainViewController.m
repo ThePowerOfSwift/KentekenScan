@@ -11,7 +11,6 @@
 #import "MainViewController.h"
 
 @interface MainViewController (){
-    id <ImageProcessingProtocol> imageProcessor;
     NSString *result;
 }
 
@@ -24,7 +23,7 @@
     [super viewDidLoad];
     
     self.results = [[NSMutableArray alloc] init];
-    imageProcessor = [ImageProcessingImplementation new];
+    self.imageProcessor = [ImageProcessingImplementation new];
     
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = [UIImage imageNamed:@"image_sample.jpg"];
@@ -88,8 +87,8 @@
 - (IBAction)checkPhoto:(UIButton *)sender {
     UIImage *processedImage;
     
-    processedImage = [imageProcessor processImage:self.imageView.image];
-    result = [imageProcessor OCRImage:processedImage];
+    processedImage = [self.imageProcessor processImage:self.imageView.image];
+    result = [self.imageProcessor OCRImage:processedImage];
 
     // Check if result is empty
     UIAlertView *myAlertView;
