@@ -24,8 +24,11 @@
     [super viewDidLoad];
     
     self.results = [[NSMutableArray alloc] init];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"defaults_results"]) {
+        self.results = [[NSMutableArray alloc]initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"defaults_results"]];
+    }
+    
     self.imageProcessor = [ImageProcessingImplementation new];
-
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = [UIImage imageNamed:@"image_sample.jpg"];
 }
@@ -126,9 +129,10 @@
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         ResultsTableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
-        
+
         [self.results addObject:result];
         tableViewController.results = self.results;
+        [[NSUserDefaults standardUserDefaults] setObject:[self.results copy] forKey:@"defaults_results"];
         
         [self.navigationController pushViewController:tableViewController animated:YES];
     }
